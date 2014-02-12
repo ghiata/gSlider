@@ -41,10 +41,13 @@ Here is how to use the gSlider:
 
 ## Features
 
-* Initialization with custom slide interval (default is 5000ms): ```js $('.gSlider').gSlider({interval: 5000});```
-* Sliding is paused when hovering the slider. This is achieved with javascript, by *clearing the interval* on mouse hover
+* Initialization with custom slide interval (default is 5000ms):
+```js
+$('.gSlider').gSlider({interval: 5000});
+```
+* Sliding is paused when hovering the slider. This is achieved with javascript, by **clearing the interval** on mouse hover
 * Images are centered and cropped. This is achieved with CSS3 by wrapping the img tags with divs that have the
-background-image centered and ```css background-size: cover;```
+background-image centered and ```background-size: cover;```
 * Upscales pictures in case they are to small (see bottom of page)
 
 ## TODO
