@@ -1,0 +1,28 @@
+.gSlider {
+    height: inherit;
+    width: inherit;
+    overflow: hidden;
+    position: relative;
+}
+
+.gSliderItem {
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    /*TODO: Make the transition speed configurable in the plugin */
+    transition: opacity 2s;
+    background-size: cover;
+    background-position: center center;
+}
+
+.gSliderItem.active {
+    opacity: 1;
+}
+
+.gSliderItem:not(.active) {
+    opacity: 0;
+}
+
+.gSlider img {
+    display: none;
+}

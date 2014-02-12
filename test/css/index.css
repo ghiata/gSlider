@@ -1,0 +1,21 @@
+/* These are styles only for the test page */
+body {
+    padding: 1% 5%;
+    width: 960px;
+}
+.sidebar-left {
+    float: left;
+    width: 200px;
+    /* Requirement: the height is always 200px */
+    height: 200px;
+}
+.sidebar-right {
+    float: right;
+    width: 350px;
+    /* Requirement: the height is always 200px */
+    height: 200px;
+}
+.sidebar-huge-bottom {
+    width: 1000px;
+    height: 1000px;
+}

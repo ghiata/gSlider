@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="../gSlider.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <div id="content">
+
+        <h1>jQuery gSlider plugin</h1>
+        <p>gSlider is a versatile, cross-browser, jQuery image slider, that supports cropping and upscaling.</p>
+
+
+        <div class="sidebar-left">
+            <div class="gSlider">
+                <img src="images/1.jpg" />
+                <img src="images/2.jpg" />
+                <img src="images/3.jpg" />
+                <img src="images/4.jpg" />
+                <img src="images/5.jpg" />
+            </div>
+        </div>
+
+        <div class="sidebar-right">
+            <div class="gSlider">
+                <img src="images/1.jpg" />
+                <img src="images/2.jpg" />
+                <img src="images/3.jpg" />
+                <img src="images/4.jpg" />
+                <img src="images/5.jpg" />
+            </div>
+        </div>
+
+        <div style="clear:both"></div>
+
+        <h2>Usage</h2>
+        <p>To use gSlider, you have to include gSlider.js and gSlider.css, add the images inside a .gSlider container
+            and initialize the plugin:
+            <pre>
+                <xmp>
+                    <link rel="stylesheet" href="/gSlider.css">
+                    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                    <script src="../gSlider.js"></script>
+                    <script src="js/index.js"></script>
+
+                    <div class="gSlider">
+                        <img src="images/1.jpg" />
+                        <img src="images/2.jpg" />
+                        <img src="images/3.jpg" />
+                        <img src="images/4.jpg" />
+                        <img src="images/5.jpg" />
+                    </div>
+
+                    <script>
+                        $(document).ready(function() {
+                            $('.gSlider').gSlider();
+                        });
+                    </script>
+                </xmp>
+            </pre>
+        </p>
+
+        <h2>Features</h2>
+        <ul>
+            <li>Initialization with custom slide interval (default is 5000ms):
+                <pre>$('.gSlider').gSlider({interval: 5000});</pre>
+            </li>
+            <li>Sliding is paused when hovering the slider. This is achieved with javascript, by <b>clearing the interval</b> on mouse hover</li>
+            <li>Images are centered and cropped. This is achieved with CSS3 by wrapping the img tags with divs that have the background-image centered and <b>background-size: cover;</b></li>
+            <li>Upscales pictures in case they are to small (see bottom of page)</li>
+        </ul>
+
+        <h2>TODO</h2>
+        <ul>
+            <li>Custom transition speed (now it is fixed to 2seconds)</li>
+            <li>Change options. Right now you cannot modify the slider's speed (interval). To do this, we would have to
+                rewrite the "single instantiation" part, read the gSlider object from the element ( with $.data('plugin_gSlider') )
+                and create/use a new "update" method that will stop the existing interval and set a new one.</li>
+            <li>Add option for sliding direction - this can be done easily by reversing the "lookup" of $nextElement
+                with different jQuery selectors</li>
+            <li>Use metadata so users don't have to write any js - options should be defined as data-option attributes.
+                In js we can $.extend() these in the config object and use them.</li>
+            <li>Use different transition effect - directly in the element.style or maybe inject css rule with jquery (with cool hack)</li>
+        </ul>
+
+        <div class="sidebar-huge-bottom">
+            <div class="gSlider">
+                <img src="images/1.jpg" />
+                <img src="images/2.jpg" />
+                <img src="images/3.jpg" />
+                <img src="images/4.jpg" />
+                <img src="images/5.jpg" />
+            </div>
+        </div>
+
+    </div><!-- End #content -->
+
+</body>
+
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="../gSlider.js"></script>
+<script src="js/index.js"></script>
+
+</html>
