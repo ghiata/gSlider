@@ -3,7 +3,6 @@
 
     // Constructor
     var gSlider = function(elem, options){
-        this.elem = elem;
         this.$elem = $(elem);
         this.options = options;
         this.init();
